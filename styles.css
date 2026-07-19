@@ -52,6 +52,9 @@
   --pad-x: clamp(1.25rem, 5vw, 5.5rem);
   --section-y: clamp(5rem, 13vh, 11rem);
   --wrap: 1600px;
+
+  --smooth: cubic-bezier(.4, 0, .2, 1);
+  --ease: cubic-bezier(.4, 0, .2, 1);
 }
 
 /* ---- reset ---------------------------------------------------- */
@@ -428,6 +431,38 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
 .hero__meta dt { color: var(--color--dim); font-family: var(--font--mono); font-size: var(--fs-mono-xs); letter-spacing: .16em; text-transform: uppercase; }
 .hero__meta dd { font-family: var(--font--main); text-transform: uppercase; font-size: 1.05rem; letter-spacing: .01em; }
 
+/* pure-CSS tooltips */
+.tooltip-trigger {
+  position: relative;
+  cursor: help;
+  border-bottom: 1px dashed var(--color--off-white-darker);
+}
+.tooltip-trigger::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background-color: var(--color--charcoal);
+  color: var(--color--white);
+  padding: 6px 12px;
+  font-family: var(--font--mono);
+  font-size: var(--size--12, .72rem);
+  letter-spacing: .04em;
+  text-transform: none;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .3s var(--ease), transform .3s var(--ease);
+  pointer-events: none;
+  z-index: 10;
+}
+.tooltip-trigger:hover::after {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
 /* signature glyph: candlestick mark, subject tied */
 .glyph { width: clamp(66px, 8vw, 104px); height: auto; }
 .glyph .wick { stroke: var(--color--off-white-darker); stroke-width: 1.4; }
@@ -654,7 +689,24 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
   min-height: 100%;
   background: var(--color--black);
 }
-.project:hover { border-color: var(--color--line-strong); background: var(--color--charcoal-2); transition: border-color .3s ease, background-color .3s ease; }
+.project:hover { border-color: var(--color--line-strong); }
+
+/* interactive card lift: transform-layer only, no layout shift */
+.interactive-card {
+  background-color: transparent;
+  transition: background-color .4s var(--smooth), transform .4s var(--smooth), border-color .3s ease;
+  will-change: transform;
+}
+.interactive-card:hover {
+  background-color: var(--color--charcoal);
+  transform: translateY(-4px);
+}
+.prog-item.interactive-card {
+  padding: .9rem;
+  margin: -.9rem;
+  border-radius: 4px;
+}
+.prog-item.interactive-card:hover { background-color: var(--color--charcoal); }
 .project__head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; }
 .project__name { font-family: var(--font--main); text-transform: uppercase; font-size: clamp(1.25rem,1.8vw,1.6rem); font-weight: 700; line-height: 1; }
 .project__desc { color: var(--color--off-white-darker); font-size: var(--fs-small); flex: 1; }
