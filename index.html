@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Joshua Ebinisi: Computer Engineering & Quantitative Analytics</title>
+  <meta name="description" content="Joshua Ebinisi, Computer Engineering student at the University of Houston and quantitative analytics professional. Incoming Quant Analytics Intern at PNC, algorithmic trading systems, and creative work." />
+  <meta name="author" content="Joshua Ebinisi" />
+
+  <meta property="og:title" content="Joshua Ebinisi: Engineering × Quant" />
+  <meta property="og:description" content="Computer Engineering student and quantitative analytics professional. Building systems that model markets and ship product." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Archivo+Narrow:wght@500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===================== NAV ===================== -->
+  <header class="nav" id="nav">
+    <a class="nav__mark" href="#top" aria-label="Joshua Ebinisi home">
+      Joshua Ebinisi <span class="dot" aria-hidden="true">&#10022;</span>
+    </a>
+    <div class="nav__center">Engineering &times; Quant &middot; Houston</div>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#work">Work</a>
+      <a href="#trading">Trading</a>
+      <a href="#studio">Studio</a>
+      <a href="#leadership">Leadership</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- mobile menu -->
+  <nav class="menu" id="menu" aria-label="Mobile">
+    <a href="#work"><span>01</span> Work</a>
+    <a href="#trading"><span>02</span> Trading</a>
+    <a href="#studio"><span>03</span> Studio</a>
+    <a href="#leadership"><span>04</span> Leadership</a>
+    <a href="#contact"><span>05</span> Contact</a>
+    <div class="menu__foot">
+      <a class="mono" href="https://github.com/joshuaebinisi" target="_blank" rel="noopener">GitHub &#8599;</a>
+      <a class="mono" href="https://www.linkedin.com/in/joshua-ebinisi/" target="_blank" rel="noopener">LinkedIn &#8599;</a>
+      <a class="mono" href="mailto:joshuaebinis@gmail.com">Email &#8599;</a>
+    </div>
+  </nav>
+
+  <main id="top">
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="hero" aria-label="Introduction">
+      <div class="hero__stars" id="heroStars" aria-hidden="true"></div>
+      <div class="hero__glow" aria-hidden="true"></div>
+
+      <div class="hero__corners wrap mono mono--xs" style="left:0;right:0;">
+        <span>Engineer the system</span>
+        <span>Model the market</span>
+      </div>
+
+      <div class="wrap hero__main">
+        <p class="kicker hero__eyebrow">Portfolio &middot; 2026/27</p>
+
+        <h1 class="hero__title">
+          <span class="line-mask"><span>Joshua</span></span>
+          <span class="line-mask l2"><span><em>Ebinisi</em></span></span>
+        </h1>
+
+        <div class="hero__aside">
+          <p class="hero__lead">
+            <b>Computer Engineering</b> student and <b>quantitative analytics</b>
+            professional. I write the code, backtest the strategy, and model
+            the risk behind decisions that have to be right.
+          </p>
+          <div class="hero__socials">
+            <a class="btn" href="https://github.com/joshuaebinisi" target="_blank" rel="noopener">
+              GitHub <span class="arw" aria-hidden="true">&#8599;</span>
+            </a>
+            <a class="btn" href="https://www.linkedin.com/in/joshua-ebinisi/" target="_blank" rel="noopener">
+              LinkedIn <span class="arw" aria-hidden="true">&#8599;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="wrap hero__foot">
+        <svg class="glyph" viewBox="0 0 150 92" fill="none" aria-hidden="true">
+          <line class="wick" x1="15" y1="20" x2="15" y2="74"/>
+          <rect class="body" x="9"  y="40" width="12" height="22"/>
+          <line class="wick" x1="47" y1="14" x2="47" y2="70"/>
+          <rect class="body" x="41" y="30" width="12" height="26"/>
+          <line class="wick" x1="79" y1="8"  x2="79" y2="60"/>
+          <rect class="body up" x="73" y="16" width="12" height="30"/>
+          <line class="wick" x1="111" y1="18" x2="111" y2="72"/>
+          <rect class="body" x="105" y="34" width="12" height="24"/>
+          <line class="wick" x1="141" y1="24" x2="141" y2="82"/>
+          <rect class="body" x="135" y="48" width="12" height="22"/>
+        </svg>
+
+        <dl class="hero__meta">
+          <div>
+            <dt>Base</dt>
+            <dd>Houston, TX</dd>
+          </div>
+          <div>
+            <dt>Study</dt>
+            <dd>UH &middot; Cmp. Eng. &middot; Honors</dd>
+          </div>
+          <div>
+            <dt>Status</dt>
+            <dd class="accent">Quant Intern &middot; PNC 2026</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ===================== CURRENTLY BAND ===================== -->
+    <section class="band" aria-label="Currently">
+      <div class="wrap band__inner">
+        <span class="band__label">Currently</span>
+        <div class="marquee" aria-hidden="true">
+          <div class="marquee__track" id="marquee">
+            <span>PNC &middot; Quantitative Analytics</span>
+            <span>SEO Tech Developer LITE</span>
+            <span>University of Houston Honors</span>
+            <span>NSBE Co-Finance Chair, 2026/27</span>
+            <span>CodePath Foundations of AI Engineering</span>
+            <span>Algorithmic Trading Research</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== THESIS ===================== -->
+    <section class="section thesis" aria-label="Overview">
+      <div class="wrap thesis__inner">
+        <div class="thesis__glyph">
+          <svg class="glyph" viewBox="0 0 150 92" fill="none" aria-hidden="true">
+            <line class="wick" x1="15" y1="24" x2="15" y2="80"/>
+            <rect class="body" x="9" y="44" width="12" height="22"/>
+            <line class="wick" x1="55" y1="16" x2="55" y2="70"/>
+            <rect class="body up" x="49" y="26" width="12" height="30"/>
+            <line class="wick" x1="95" y1="10" x2="95" y2="62"/>
+            <rect class="body" x="89" y="20" width="12" height="28"/>
+            <line class="wick" x1="135" y1="20" x2="135" y2="78"/>
+            <rect class="body" x="129" y="38" width="12" height="26"/>
+          </svg>
+        </div>
+        <h2 class="thesis__text">
+          I work where engineering meets capital.
+          <span class="sub">Firmware and data pipelines on one screen, backtests and risk models on the other.</span>
+        </h2>
+        <dl class="thesis__meta">
+          <div><b>3.73</b><span class="mono mono--dim">GPA &middot; Honors Program</span></div>
+          <div><b>400+</b><span class="mono mono--dim">Models touched at PNC</span></div>
+          <div><b>3</b><span class="mono mono--dim">Languages in production</span></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ===================== TECHNICAL PORTFOLIO ===================== -->
+    <section class="section" id="work" aria-label="Technical work">
+      <div class="wrap">
+        <div class="sec-head">
+          <div class="sec-head__index">
+            <span class="kicker">Quant &middot; Engineering</span>
+            <span class="mono mono--xs mono--dim">38.9072&deg; N, 77.0369&deg; W</span>
+          </div>
+          <h2 class="sec-head__title">The technical work</h2>
+          <p class="sec-head__note mono mono--xs">Python &middot; C++ &middot; MATLAB<br/>PySpark &middot; Pandas &middot; NumPy</p>
+        </div>
+
+        <!-- feature + aside -->
+        <div class="grid">
+          <article class="feature">
+            <div class="feature__top">
+              <h3 class="feature__role">Quantitative Analytics Intern<br/><span class="org">PNC Financial</span></h3>
+              <span class="tag tag--hot">Summer 2026 &middot; Washington, D.C.</span>
+            </div>
+            <p class="body-copy">
+              Incoming on PNC's Model Risk team, the group responsible for the bank's
+              inventory of quantitative models. Work spans regulatory forecasting,
+              risk intelligence automation, and large-scale data engineering.
+            </p>
+            <ul class="feature__list">
+              <li data-k="CCAR"><span><b>1,000 Monte Carlo simulations</b> behind a CCAR/DFAST loss-forecasting model, testing a 90% prediction interval against actual quarterly results, deployed with Python's <code>pickle</code>.</span></li>
+              <li data-k="PIPE"><span>Productionized a <b>regulatory and risk intelligence pipeline</b> in Python that surfaces daily reporting for Model Risk, MRMG, Audit, and OP Risk, driving <b>+10%</b> development output.</span></li>
+              <li data-k="DATA"><span>Engineered an end-to-end <b>Hadoop pipeline</b> (PySpark &middot; Hive &middot; Impala) flagging client spending spikes to trigger banker outreach, scheduled via Slurm/PowerShell.</span></li>
+            </ul>
+            <div class="tags">
+              <span class="tag">Python</span><span class="tag">PySpark</span><span class="tag">Hive</span>
+              <span class="tag">Impala</span><span class="tag">Monte Carlo</span><span class="tag">Slurm</span>
+            </div>
+          </article>
+
+          <aside class="aside-card">
+            <span class="kicker">Programs</span>
+            <div class="prog-item">
+              <h3 class="aside-card__title">SEO Tech Developer LITE</h3>
+              <p class="body-copy">
+                Selected for SEO Career's technical development track, a structured
+                program pairing production software fundamentals with industry
+                mentorship for high-performing engineering students.
+              </p>
+              <ul>
+                <li>Software engineering foundations</li>
+                <li>Data structures and systems design</li>
+                <li>Industry mentorship and interview prep</li>
+              </ul>
+              <div class="tags"><span class="tag">Cohort 2026</span><span class="tag">Mentored</span></div>
+            </div>
+            <hr class="hr" />
+            <div class="prog-item">
+              <h3 class="aside-card__title">CodePath: Foundations of AI Engineering</h3>
+              <p class="body-copy">
+                Selected for CodePath's technical fellowship covering applied AI
+                and machine learning engineering fundamentals alongside a national
+                cohort of engineering students.
+              </p>
+            </div>
+            <a class="link-arw" href="https://www.linkedin.com/in/joshua-ebinisi/" target="_blank" rel="noopener">
+              More on LinkedIn <span class="arw" aria-hidden="true">&#8599;</span>
+            </a>
+          </aside>
+        </div>
+
+        <!-- projects -->
+        <div class="grid projects">
+          <article class="project">
+            <div class="project__head">
+              <h4 class="project__name">Signal-Modulated<br/>DCA Backtester</h4>
+              <span class="mono mono--xs mono--dim">Jan 2026</span>
+            </div>
+            <p class="project__desc">
+              Automated backtester over Nasdaq-100 futures layering RSI, volatility,
+              and MA-200 filters onto a dollar-cost-average base. Rules held fixed
+              ($100 / 30 days) across five start years, 2010 to 2018.
+            </p>
+            <div class="stat-row">
+              <div class="stat"><b class="pos">832%</b><span>Return</span></div>
+              <div class="stat"><b>-75%</b><span>Capital vs. DCA</span></div>
+            </div>
+            <div class="method"><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">yFinance</span></div>
+          </article>
+
+          <article class="project">
+            <div class="project__head">
+              <h4 class="project__name">Donchian Breakout<br/>BTC / USD</h4>
+              <span class="mono mono--xs mono--dim">Jan 2026</span>
+            </div>
+            <p class="project__desc">
+              Systematic breakout algorithm demo-trading BTC/USD. Lookback windows
+              optimized across six years (2020 to 2026) to generate long/short signals,
+              backtested on $10k of starting capital through the 2022 downturn.
+            </p>
+            <div class="stat-row">
+              <div class="stat"><b class="pos">742%</b><span>Total return</span></div>
+              <div class="stat"><b>-40%</b><span>Max drawdown</span></div>
+            </div>
+            <div class="method"><span class="tag">Python</span><span class="tag">NumPy</span><span class="tag">TradingView</span></div>
+          </article>
+
+          <article class="project">
+            <div class="project__head">
+              <h4 class="project__name">Governance<br/>News Bot</h4>
+              <span class="mono mono--xs mono--dim">Jun 2026</span>
+            </div>
+            <p class="project__desc">
+              AI-powered bot for PNC's Quant team using keyword filtering to surface
+              governance and model-development updates in real time, with a chatbot
+              interface to query changes by regulatory event on demand.
+            </p>
+            <div class="stat-row">
+              <div class="stat"><b class="pos">+10%</b><span>Dev output</span></div>
+              <div class="stat"><b>Real-time</b><span>Monitoring</span></div>
+            </div>
+            <div class="method"><span class="tag">Python</span><span class="tag">Power Automate</span><span class="tag">JS</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TRADING LOG ===================== -->
+    <section class="section" id="trading" aria-label="Trading log" style="background:var(--color--charcoal-2);border-block:1px solid var(--color--line);">
+      <div class="wrap">
+        <div class="sec-head">
+          <div class="sec-head__index">
+            <span class="kicker">The desk</span>
+            <span class="mono mono--xs mono--dim">Log &middot; Backtested</span>
+          </div>
+          <h2 class="sec-head__title">Trading and order flow</h2>
+          <p class="sec-head__note mono mono--xs">Historical backtest results<br/>Demo capital &middot; not advice</p>
+        </div>
+
+        <div class="desk">
+          <div class="desk__lead">
+            <p class="lead">Every strategy earns its place on the tape, not the whiteboard.</p>
+            <p class="body-copy">
+              I build backtesting engines and study order flow to separate edge from
+              noise: fixing the rules, walking them forward across market regimes,
+              and tracking the numbers week over week before a single live dollar moves.
+            </p>
+            <ul class="method" style="flex-direction:column;gap:.7rem;">
+              <li class="mono mono--xs mono--dim">- Walk-forward validation across regimes</li>
+              <li class="mono mono--xs mono--dim">- Order-flow and volatility filtering</li>
+              <li class="mono mono--xs mono--dim">- Drawdown and risk-adjusted return tracking</li>
+            </ul>
+            <a class="link-arw" href="https://github.com/joshuaebinisi" target="_blank" rel="noopener">
+              Scripts on GitHub <span class="arw" aria-hidden="true">&#8599;</span>
+            </a>
+          </div>
+
+          <div class="desk__table">
+            <table class="ledger">
+              <caption>Strategy logbook: backtested performance</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Strategy</th>
+                  <th scope="col">Market</th>
+                  <th scope="col">Window</th>
+                  <th scope="col" class="num">Return</th>
+                  <th scope="col" class="num">Drawdown</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Signal-Mod DCA</th>
+                  <td>NQ-100 Futures</td>
+                  <td>2010 to 2018</td>
+                  <td class="num pos">+832%</td>
+                  <td class="num">-75% cap</td>
+                </tr>
+                <tr>
+                  <th scope="row">Donchian Breakout</th>
+                  <td>BTC / USD</td>
+                  <td>2020 to 2026</td>
+                  <td class="num pos">+742%</td>
+                  <td class="num">-40%</td>
+                </tr>
+                <tr>
+                  <th scope="row">DCA Baseline</th>
+                  <td>NQ-100 Futures</td>
+                  <td>2010 to 2025</td>
+                  <td class="num">Buy and hold</td>
+                  <td class="num">-12.4% rel.</td>
+                </tr>
+                <tr>
+                  <th scope="row">Order-Flow Study</th>
+                  <td>Multi-asset</td>
+                  <td>Weekly</td>
+                  <td class="num">Research</td>
+                  <td class="num">Ongoing</td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="ledger__note">
+              Figures are historical backtests on demo capital, rules held fixed. Past performance is not indicative of future results.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== STUDIO: content ===================== -->
+    <section class="section" id="studio" aria-label="Content">
+      <div class="wrap">
+        <div class="sec-head">
+          <div class="sec-head__index">
+            <span class="kicker">Studio &middot; Content</span>
+            <span class="mono mono--xs mono--dim">College life &middot; Beyond</span>
+          </div>
+          <h2 class="sec-head__title">Content</h2>
+          <p class="sec-head__note mono mono--xs">Instagram &middot; TikTok<br/>Short-form &middot; Lifestyle</p>
+        </div>
+
+        <div class="panels">
+          <article class="panel panel--solo">
+            <div>
+              <span class="panel__num">Content 01</span>
+              <h3 class="panel__title">UGC and <span class="accent">Lifestyle Content</span></h3>
+            </div>
+            <p class="panel__body">
+              Short-form content documenting college life at the University of
+              Houston and beyond: campus moments, day-to-day life, and everything
+              in between as a student balancing engineering, quant work, and
+              everything else along the way.
+            </p>
+            <div class="panel__foot">
+              <div class="hero__socials">
+                <a class="btn" href="https://www.instagram.com/joshm4v/" target="_blank" rel="noopener">
+                  Instagram <span class="arw" aria-hidden="true">&#8599;</span>
+                </a>
+                <a class="btn" href="https://www.tiktok.com/@joshm4v" target="_blank" rel="noopener">
+                  TikTok <span class="arw" aria-hidden="true">&#8599;</span>
+                </a>
+              </div>
+              <span class="mono mono--xs mono--dim">Short-form &middot; Lifestyle</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== LEADERSHIP ===================== -->
+    <section class="section" id="leadership" aria-label="Leadership">
+      <div class="wrap">
+        <div class="sec-head">
+          <div class="sec-head__index">
+            <span class="kicker">Leadership &middot; Service</span>
+            <span class="mono mono--xs mono--dim">Finance &middot; Community</span>
+          </div>
+          <h2 class="sec-head__title">Leadership</h2>
+          <p class="sec-head__note mono mono--xs">NSBE &middot; Streetwise GA<br/>Earth Savers</p>
+        </div>
+
+        <div class="rows">
+          <div class="row">
+            <span class="row__idx">A1</span>
+            <h3 class="row__title">NSBE Co-Finance Chair<small>University of Houston, 2026/27</small></h3>
+            <p class="row__body">Elected Co-Finance Chair for the National Society of Black Engineers, University of Houston chapter. Working alongside Treasurer Loro on transparent, data-driven financial management, running culture-driven fundraising like a Jollof Plate Drive, and leveraging my incoming Quantitative Analytics Internship at PNC to build corporate sponsorship packages for the chapter.</p>
+            <span class="row__geo">Houston, TX</span>
+          </div>
+
+          <div class="row">
+            <span class="row__idx">A2</span>
+            <h3 class="row__title">Streetwise Georgia<small>Student Volunteer, 2024 to 2025</small></h3>
+            <p class="row__body">Contributed over 60 hours supporting 100+ families by coordinating food and clothing distributions, warehouse operations, and seasonal events, reducing their monthly living expenses by over $200.</p>
+            <span class="row__geo">Lawrenceville, GA</span>
+          </div>
+
+          <div class="row">
+            <span class="row__idx">A3</span>
+            <h3 class="row__title">Earth Savers<small>President, Community Service Group</small></h3>
+            <p class="row__body">Led grassroots fundraising that raised &#8358;1.5 million for the renovation of Agbara Community High School, applying the same financial discipline now shaping how I approach the NSBE chapter budget, in collaboration with Society Developers and aligned to UN Sustainable Development Goals 3 and 4.</p>
+            <span class="row__geo">Lagos, Nigeria</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="section contact" id="contact" aria-label="Contact">
+      <div class="wrap">
+        <div class="contact__grid">
+          <div class="contact__head">
+            <span class="kicker">Get in touch</span>
+            <h2 class="contact__title">Let's<br/>build&nbsp;<a href="mailto:joshuaebinis@gmail.com">something.</a></h2>
+          </div>
+          <div class="contact__side">
+            <p class="body-copy">Open to quant, engineering, and build conversations, including internships, research, or collaboration.</p>
+            <div class="hero__socials">
+              <a class="btn btn--solid" href="mailto:joshuaebinis@gmail.com">Email me <span class="arw" aria-hidden="true">&#8599;</span></a>
+            </div>
+            <div class="mono mono--xs">
+              <a href="https://github.com/joshuaebinisi" target="_blank" rel="noopener">GitHub: /joshuaebinisi &#8599;</a><br/>
+              <a href="https://www.linkedin.com/in/joshua-ebinisi/" target="_blank" rel="noopener">LinkedIn: /joshua-ebinisi &#8599;</a>
+            </div>
+          </div>
+        </div>
+
+        <footer class="foot">
+          <div class="foot__col">
+            <span class="foot__mark">
+              <svg class="glyph" viewBox="0 0 150 92" fill="none" aria-hidden="true" style="width:44px;">
+                <line class="wick" x1="20" y1="24" x2="20" y2="78"/>
+                <rect class="body" x="14" y="42" width="12" height="22"/>
+                <line class="wick" x1="75" y1="12" x2="75" y2="66"/>
+                <rect class="body up" x="69" y="22" width="12" height="30"/>
+                <line class="wick" x1="130" y1="22" x2="130" y2="76"/>
+                <rect class="body" x="124" y="40" width="12" height="24"/>
+              </svg>
+              <span class="name">Joshua Ebinisi</span>
+            </span>
+            <span class="mono mono--xs mono--dim">Computer Engineering &times; Quantitative Analytics &middot; Houston, TX</span>
+          </div>
+          <div class="foot__col" style="align-items:flex-end;text-align:right;">
+            <a class="to-top mono mono--xs" href="#top">Back to top <span aria-hidden="true">&uarr;</span></a>
+            <span class="mono mono--xs mono--dim">Designed and built by Joshua Ebinisi. &copy; 2026</span>
+          </div>
+        </footer>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>
