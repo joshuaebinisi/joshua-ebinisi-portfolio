@@ -30,4 +30,4 @@ Since this is a static frontend project, running it is straightforward.
 
 2. **Run the bat file after each change**
 ``` terminal
-[nodemon --watch index.html --watch styles.css --exec "sync.bat"]
+nodemon --watch index.html --watch styles.css --exec "sync.bat"
