@@ -27,3 +27,7 @@ Since this is a static frontend project, running it is straightforward.
    git clone [https://github.com/joshuaebinisi/joshua-ebinisi-portfolio.git](https://github.com/joshuaebinisi/joshua-ebinisi-portfolio.git)
 
    cd joshua-ebinisi-portfolio
+
+2. **Run the bat file after each change**
+``` terminal
+[nodemon --watch index.html --watch styles.css --exec "sync.bat"]
