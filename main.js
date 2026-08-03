@@ -55,6 +55,20 @@
     }
   }
 
+  /* ---- Tooltip tap support (touch devices don't fire :hover) ---- */
+  var tooltips = Array.prototype.slice.call(document.querySelectorAll('.tooltip-trigger'));
+  tooltips.forEach(function (el) {
+    el.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var wasOpen = el.classList.contains('is-open');
+      tooltips.forEach(function (t) { t.classList.remove('is-open'); });
+      el.classList.toggle('is-open', !wasOpen);
+    });
+  });
+  document.addEventListener('click', function () {
+    tooltips.forEach(function (t) { t.classList.remove('is-open'); });
+  });
+
   /* ---- Active section in nav ---- */
   var links = Array.prototype.slice.call(document.querySelectorAll('.nav__links a'));
   var map = {};

@@ -172,7 +172,7 @@
         <div class="sec-head">
           <div class="sec-head__index">
             <span class="kicker">Quant &middot; Engineering</span>
-            <span class="mono mono--xs mono--dim">38.9072&deg; N, 77.0369&deg; W</span>
+            <span class="mono mono--xs mono--dim tooltip-trigger" data-tooltip="Washington, D.C. &middot; site of the current PNC Quantitative Analytics Internship" tabindex="0">38.9072&deg; N, 77.0369&deg; W</span>
           </div>
           <h2 class="sec-head__title">The technical work</h2>
           <p class="sec-head__note mono mono--xs">Python &middot; C++ &middot; MATLAB<br/>PySpark &middot; Pandas &middot; NumPy</p>
@@ -238,17 +238,53 @@
         </div>
 
         <!-- projects -->
+        <div class="projects__label">
+          <span class="kicker">Projects</span>
+        </div>
         <div class="grid projects">
+          <article class="project interactive-card">
+            <div class="project__head">
+              <h4 class="project__name">ThesisLedger</h4>
+              <span class="mono mono--xs mono--dim">Jul 2026</span>
+            </div>
+            <ul class="project__desc project__desc--list">
+              <li>Co-developed a full-stack AI platform that verifies investment theses against official SEC filings</li>
+              <li>Led the Next.js frontend and LangGraph extraction pipeline</li>
+              <li>Enforced a strict source-integrity rule so every claim traces to an exact quote, eliminating fabricated evidence</li>
+              <li>Runs fully offline with no API keys; local only for now, ahead of an Oracle Cloud deployment</li>
+            </ul>
+            <div class="stat-row">
+              <div class="stat"><b class="pos">90%</b><span>Source-backed claims</span></div>
+              <div class="stat"><b>Local</b><span>Pre-Oracle deploy</span></div>
+            </div>
+            <div class="method"><span class="tag">Django</span><span class="tag">Next.js</span><span class="tag">LangGraph</span><span class="tag">pgvector</span><span class="tag">Celery</span><span class="tag">Ollama</span></div>
+          </article>
+
+          <article class="project interactive-card">
+            <div class="project__head">
+              <h4 class="project__name">Governance<br/>AI News Bot</h4>
+              <span class="mono mono--xs mono--dim">Jun 2026</span>
+            </div>
+            <ul class="project__desc project__desc--list">
+              <li>AI-powered bot for PNC's Quant team using keyword filtering to surface governance and model-development updates in real time</li>
+              <li>Chatbot interface to query changes by regulatory event on demand</li>
+            </ul>
+            <div class="stat-row">
+              <div class="stat"><b class="pos">+10%</b><span>Dev output</span></div>
+              <div class="stat"><b>Real-time</b><span>Monitoring</span></div>
+            </div>
+            <div class="method"><span class="tag">Python</span><span class="tag">Power Automate</span><span class="tag">JS</span></div>
+          </article>
+
           <article class="project interactive-card">
             <div class="project__head">
               <h4 class="project__name">Signal-Modulated<br/>DCA Backtester</h4>
               <span class="mono mono--xs mono--dim">Jan 2026</span>
             </div>
-            <p class="project__desc">
-              Automated backtester over Nasdaq-100 futures layering RSI, volatility,
-              and MA-200 filters onto a dollar-cost-average base. Rules held fixed
-              ($100 / 30 days) across five start years, 2010 to 2018.
-            </p>
+            <ul class="project__desc project__desc--list">
+              <li>Automated backtester over Nasdaq-100 futures layering RSI, volatility, and MA-200 filters onto a dollar-cost-average base</li>
+              <li>Rules held fixed ($100 / 30 days) across five start years, 2010 to 2018</li>
+            </ul>
             <div class="stat-row">
               <div class="stat"><b class="pos">832%</b><span>Return</span></div>
               <div class="stat"><b>-75%</b><span>Capital vs. DCA</span></div>
@@ -261,51 +297,16 @@
               <h4 class="project__name">Donchian Breakout<br/>BTC / USD</h4>
               <span class="mono mono--xs mono--dim">Jan 2026</span>
             </div>
-            <p class="project__desc">
-              Systematic breakout algorithm demo-trading BTC/USD. Lookback windows
-              optimized across six years (2020 to 2026) to generate long/short signals,
-              backtested on $10k of starting capital through the 2022 downturn.
-            </p>
+            <ul class="project__desc project__desc--list">
+              <li>Systematic breakout algorithm demo-trading BTC/USD</li>
+              <li>Lookback windows optimized across six years (2020 to 2026) to generate long/short signals</li>
+              <li>Backtested on $10k of starting capital through the 2022 downturn</li>
+            </ul>
             <div class="stat-row">
               <div class="stat"><b class="pos">742%</b><span>Total return</span></div>
               <div class="stat"><b>-40%</b><span>Max drawdown</span></div>
             </div>
             <div class="method"><span class="tag">Python</span><span class="tag">NumPy</span><span class="tag">TradingView</span></div>
-          </article>
-
-          <article class="project interactive-card">
-            <div class="project__head">
-              <h4 class="project__name">Governance<br/>AI News Bot</h4>
-              <span class="mono mono--xs mono--dim">Jun 2026</span>
-            </div>
-            <p class="project__desc">
-              AI-powered bot for PNC's Quant team using keyword filtering to surface
-              governance and model-development updates in real time, with a chatbot
-              interface to query changes by regulatory event on demand.
-            </p>
-            <div class="stat-row">
-              <div class="stat"><b class="pos">+10%</b><span>Dev output</span></div>
-              <div class="stat"><b>Real-time</b><span>Monitoring</span></div>
-            </div>
-            <div class="method"><span class="tag">Python</span><span class="tag">Power Automate</span><span class="tag">JS</span></div>
-          </article>
-
-          <article class="project interactive-card">
-            <div class="project__head">
-              <h4 class="project__name">ThesisLedger</h4>
-              <span class="mono mono--xs mono--dim">In progress</span>
-            </div>
-            <ul class="project__desc project__desc--list">
-              <li>Co-developed a full-stack AI platform that verifies investment theses against official SEC filings</li>
-              <li>Led the Next.js frontend and LangGraph extraction pipeline</li>
-              <li>Enforced a strict source-integrity rule so every claim traces to an exact quote, eliminating fabricated evidence</li>
-              <li>Runs fully offline with no API keys; local only for now, ahead of an Oracle Cloud deployment</li>
-            </ul>
-            <div class="stat-row">
-              <div class="stat"><b class="pos">100%</b><span>Source-backed claims</span></div>
-              <div class="stat"><b>Local</b><span>Pre-Oracle deploy</span></div>
-            </div>
-            <div class="method"><span class="tag">Django</span><span class="tag">Next.js</span><span class="tag">LangGraph</span><span class="tag">pgvector</span><span class="tag">Celery</span><span class="tag">Ollama</span></div>
           </article>
         </div>
       </div>

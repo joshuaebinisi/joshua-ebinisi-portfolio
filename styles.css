@@ -446,22 +446,29 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
   background-color: var(--color--charcoal);
   color: var(--color--white);
   padding: 6px 12px;
+  border-radius: 3px;
   font-family: var(--font--mono);
   font-size: var(--size--12, .72rem);
   letter-spacing: .04em;
   text-transform: none;
-  white-space: nowrap;
+  white-space: normal;
+  width: max-content;
+  max-width: min(60vw, 240px);
+  text-align: left;
   opacity: 0;
   visibility: hidden;
   transition: opacity .3s var(--ease), transform .3s var(--ease);
   pointer-events: none;
   z-index: 10;
 }
-.tooltip-trigger:hover::after {
+.tooltip-trigger:hover::after,
+.tooltip-trigger:focus::after,
+.tooltip-trigger.is-open::after {
   opacity: 1;
   visibility: visible;
   transform: translateX(-50%) translateY(0);
 }
+.tooltip-trigger:focus { outline: none; }
 
 /* signature glyph: candlestick mark, subject tied */
 .glyph { width: clamp(66px, 8vw, 104px); height: auto; }
@@ -677,6 +684,7 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
 .tag--hot { border-color: var(--color--orange); color: var(--color--orange); }
 
 /* project cards */
+.projects__label { margin-top: clamp(2rem, 4vw, 3.2rem); margin-bottom: clamp(1rem, 2vw, 1.6rem); }
 .projects { margin-top: clamp(1.1rem, 2.2vw, 2.4rem); }
 .project {
   grid-column: span 4;
@@ -712,7 +720,7 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
 .project__desc { color: var(--color--off-white-darker); font-size: var(--fs-small); flex: 1; }
 .project__desc--list { display: flex; flex-direction: column; gap: .55rem; }
 .project__desc--list li { display: flex; gap: .6rem; }
-.project__desc--list li::before { content: "\2192"; color: var(--color--orange); flex: none; }
+.project__desc--list li::before { content: "\2794"; color: var(--color--orange); flex: none; }
 .stat-row { display: flex; gap: 1.4rem; flex-wrap: wrap; padding-top: 1rem; border-top: 1px solid var(--color--line); }
 .stat { display: flex; flex-direction: column; gap: .2rem; }
 .stat b { font-family: var(--font--main); font-size: clamp(1.7rem,2.6vw,2.4rem); line-height: 1; color: var(--color--white); font-weight: 700; }
