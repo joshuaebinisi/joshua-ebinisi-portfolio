@@ -13,6 +13,23 @@
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
+  /* ---- Theme toggle (dark default, choice remembered) ---- */
+  var root = document.documentElement;
+  var themeToggle = document.getElementById('themeToggle');
+  var themeLabel = themeToggle.querySelector('.theme-toggle__label');
+  var syncThemeToggle = function () {
+    var isLight = root.getAttribute('data-theme') === 'light';
+    themeLabel.textContent = isLight ? 'Dark' : 'Light';
+    themeToggle.setAttribute('aria-label', isLight ? 'Switch to dark mode' : 'Switch to light mode');
+  };
+  themeToggle.addEventListener('click', function () {
+    var next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem('theme', next); } catch (e) {}
+    syncThemeToggle();
+  });
+  syncThemeToggle();
+
   /* ---- Mobile menu ---- */
   var toggle = document.getElementById('navToggle');
   var menu = document.getElementById('menu');
