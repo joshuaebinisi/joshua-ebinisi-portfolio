@@ -679,7 +679,7 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
    TECHNICAL PORTFOLIO
    ============================================================= */
 .feature {
-  grid-column: 1 / span 7;
+  grid-column: span 6;
   background: var(--color--charcoal);
   border: 1px solid var(--color--line);
   border-radius: 4px;
@@ -714,7 +714,7 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
 .feature__list b { color: var(--color--white); font-weight: 600; }
 
 .aside-card {
-  grid-column: 8 / -1;
+  grid-column: 1 / -1;
   border: 1px solid var(--color--line);
   border-radius: 4px;
   padding: clamp(1.6rem, 3vw, 2.6rem);
@@ -728,6 +728,17 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
 .aside-card li { display: flex; gap: .7rem; font-size: var(--fs-small); color: var(--color--off-white-darker); }
 .aside-card li::before { content: "\2192"; color: var(--color--orange); }
 .prog-item { display: flex; flex-direction: column; gap: 1rem; }
+
+/* programs as a row under the two features */
+.aside-card--row {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  column-gap: clamp(1.4rem, 3vw, 2.8rem);
+  row-gap: 1.2rem;
+}
+.aside-card--row > .kicker,
+.aside-card--row > .link-arw { grid-column: 1 / -1; justify-self: start; }
+.aside-card--row > .hr { width: 1px; height: auto; }
 
 .tags { display: flex; flex-wrap: wrap; gap: .5rem; }
 .tag {
@@ -898,8 +909,7 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
    RESPONSIVE
    ============================================================= */
 @media (max-width: 1024px) {
-  .feature { grid-column: 1 / span 8; }
-  .aside-card { grid-column: 9 / -1; }
+  .feature { grid-column: 1 / -1; }
   .panel--wide { grid-column: 1 / span 6; }
   .panel--tall { grid-column: 7 / -1; }
   .desk__lead { grid-column: 1 / span 5; position: static; }
@@ -924,6 +934,8 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
   .sec-head__note { grid-column: 1 / -1; text-align: left; margin-top: .5rem; }
 
   .feature, .aside-card { grid-column: 1 / -1; }
+  .aside-card--row { grid-template-columns: 1fr; }
+  .aside-card--row > .hr { width: auto; height: 1px; }
   .project { grid-column: 1 / -1; }
   .panel--wide, .panel--tall, .panel--solo { grid-column: 1 / -1; min-height: 300px; }
   .desk__lead, .desk__table { grid-column: 1 / -1; }
