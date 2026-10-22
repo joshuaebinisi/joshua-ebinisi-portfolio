@@ -200,25 +200,29 @@
             <p class="body-copy">
               Selected as one of 50 participants for JPMorganChase's 24-hour Data for Good hackathon.
               Our team worked with the National Basketball Players Association (NBPA) on a real question:
-              what do travel and scheduling actually cost NBA teams on the court? We delivered an
-              explainable model and an interactive dashboard to forecast fatigue and explore better schedules.
+              how do travel and scheduling affect NBA teams on the court? The answer: it is not the miles,
+              it is the missing rest.
             </p>
             <ul class="feature__list">
-              <li data-k="DATA"><span>Rebuilt every trip for <b>6,150 regular-season games</b> (12,300 team-games) across 51 arenas: miles, rest days, time zones, body clock, altitude, and road-trip length.</span></li>
-              <li data-k="MODEL"><span>Regression on Net Rating and the Four Factors, controlling for team strength and home court: <b>17 features &times; 9 measures</b> with a false-discovery correction. Fit on 2018-19 to 2022-23, validated out of sample (predicted -2.0, actual -2.4).</span></li>
-              <li data-k="FIND"><span>Back-to-backs cost <b>-2.4 Net Rating</b> and road games at altitude <b>-3.0</b>, while miles flown and jet lag showed no clear effect. The cost is the missing rest, not the trip.</span></li>
-              <li data-k="UI"><span>Led the design of the <b>NBPA-styled dashboard</b> with light and dark mode, a 2026-27 week-by-week fatigue forecast, and an integer-program schedule that cuts back-to-backs from <b>426 to 211</b>.</span></li>
+              <li data-k="DATA"><span>Rebuilt every trip for <b>6,150 regular-season games</b> across 51 arenas: miles, rest days, time zones, altitude, and road-trip length.</span></li>
+              <li data-k="B2B"><span>Same team, one night apart: teams win <b>51%</b> on night 1 of a back-to-back and only <b>44%</b> on night 2.</span></li>
+              <li data-k="REST"><span>A tired team facing a rested one won just <b>38%</b> of the time, and a tired home team's win rate fell from <b>63%</b> to <b>47%</b>.</span></li>
+              <li data-k="UI"><span>Led the design of the <b>NBPA-styled dashboard</b>, including a schedule heat map that scores every team's 2026-27 week from Calm to Brutal.</span></li>
             </ul>
             <div class="stat-row">
-              <div class="stat"><b class="pos">-2.4</b><span>Net Rating, back-to-back</span></div>
-              <div class="stat"><b>-3.0</b><span>Away at altitude</span></div>
-              <div class="stat"><b>6,150</b><span>Games modeled</span></div>
+              <div class="stat"><b class="pos">52.4%</b><span>Win %, calm weeks</span></div>
+              <div class="stat"><b>49.1%</b><span>Busy weeks</span></div>
+              <div class="stat"><b>46.2%</b><span>Heavy weeks</span></div>
+              <div class="stat"><b>40.8%</b><span>Brutal weeks</span></div>
             </div>
             <div class="tags">
               <span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">statsmodels</span>
-              <span class="tag">SHAP</span><span class="tag">Integer Programming</span><span class="tag">JavaScript</span>
+              <span class="tag">Jupyter</span><span class="tag">JavaScript</span>
             </div>
             <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+              <a class="link-arw" href="https://canva.link/hxu0j3tpp5e81ze" target="_blank" rel="noopener noreferrer">
+                Presentation <span class="arw" aria-hidden="true">&#8599;</span>
+              </a>
               <a class="link-arw" href="https://lnkd.in/p/gs7sNbKy" target="_blank" rel="noopener noreferrer">
                 Read the recap <span class="arw" aria-hidden="true">&#8599;</span>
               </a>
@@ -248,6 +252,29 @@
               <span class="tag">Impala</span><span class="tag">Monte Carlo</span><span class="tag">Slurm</span>
             </div>
           </article>
+
+          <div class="showcase">
+            <figure class="showcase__item">
+              <a href="assets/hackathon/spurs-vs-76ers.mp4" target="_blank" rel="noopener noreferrer" class="showcase__media" aria-label="Open the Spurs vs. 76ers video">
+                <video src="assets/hackathon/spurs-vs-76ers.mp4" autoplay muted loop playsinline preload="metadata"></video>
+              </a>
+              <figcaption>
+                <span class="mono mono--xs">Two seasons, one clock</span>
+                <span class="showcase__text">2024-25 Spurs (heaviest schedule, losing record) vs. 2021-22 76ers (lightest schedule, winning record), replayed night by night.</span>
+                <a class="link-arw" href="assets/hackathon/spurs-vs-76ers.mp4" target="_blank" rel="noopener noreferrer">Watch the video <span class="arw" aria-hidden="true">&#8599;</span></a>
+              </figcaption>
+            </figure>
+            <figure class="showcase__item">
+              <a href="assets/hackathon/schedule-heatmap.jpg" target="_blank" rel="noopener noreferrer" class="showcase__media" aria-label="Open the schedule heat map full size">
+                <img src="assets/hackathon/schedule-heatmap.jpg" alt="Heat map of the 2026-27 NBA schedule: each team's weeks colored Calm, Busy, Heavy or Brutal" loading="lazy" />
+              </a>
+              <figcaption>
+                <span class="mono mono--xs">Schedule heat map</span>
+                <span class="showcase__text">Every team's 2026-27 week, colored by back-to-backs and altitude games: 426 back-to-backs and 66 Heavy or Brutal weeks.</span>
+                <a class="link-arw" href="assets/hackathon/schedule-heatmap.jpg" target="_blank" rel="noopener noreferrer">Open full size <span class="arw" aria-hidden="true">&#8599;</span></a>
+              </figcaption>
+            </figure>
+          </div>
 
           <aside class="aside-card aside-card--row">
             <span class="kicker">Programs</span>
