@@ -30,6 +30,68 @@
   });
   syncThemeToggle();
 
+  /* ---- Intro loader (space theme, once per session) ---- */
+  var loader = document.getElementById('loader');
+  if (loader && root.classList.contains('has-loader')) {
+    var loaderStars = document.getElementById('loaderStars');
+    for (var k = 0; k < 40; k++) {
+      var ls = document.createElement('span');
+      ls.className = 'star' + (Math.random() < 0.15 ? ' star--accent' : '');
+      ls.style.setProperty('--x', (Math.random() * 100).toFixed(1) + '%');
+      ls.style.setProperty('--y', (Math.random() * 100).toFixed(1) + '%');
+      ls.style.setProperty('--s', (Math.random() * 2.5 + 1.5).toFixed(1) + 'px');
+      ls.style.setProperty('--o', (Math.random() * 0.4 + 0.35).toFixed(2));
+      ls.style.setProperty('--dur', (Math.random() * 5 + 5).toFixed(1) + 's');
+      ls.style.setProperty('--delay', (Math.random() * -8).toFixed(1) + 's');
+      ls.style.setProperty('--dx', (Math.random() * 14 - 7).toFixed(1) + 'px');
+      ls.style.setProperty('--dy', (Math.random() * 10 + 6).toFixed(1) + 'px');
+      loaderStars.appendChild(ls);
+    }
+
+    var steps = ['Calibrating orbit', 'Charting the star field', 'Loading the backtests', 'Syncing the desk', 'Ready for launch'];
+    var fillEl = document.getElementById('loaderFill');
+    var pctEl = document.getElementById('loaderPct');
+    var statusEl = document.getElementById('loaderStatus');
+    var MIN_MS = 2400, MAX_MS = 6000;
+    var t0 = performance.now();
+    var pageLoaded = document.readyState === 'complete';
+    var finished = false;
+    window.addEventListener('load', function () { pageLoaded = true; });
+
+    var finish = function () {
+      if (finished) return;
+      finished = true;
+      try { sessionStorage.setItem('introSeen', '1'); } catch (e) {}
+      fillEl.style.transform = 'scaleX(1)';
+      pctEl.textContent = '100%';
+      statusEl.textContent = steps[steps.length - 1];
+      setTimeout(function () {
+        loader.classList.add('is-done');
+        root.classList.add('is-loaded');
+        setTimeout(function () {
+          root.classList.remove('has-loader');
+          loader.remove();
+        }, 1000);
+      }, 280);
+    };
+
+    var tick = function (now) {
+      if (finished) return;
+      var t = now - t0;
+      var eased = 1 - Math.pow(1 - Math.min(t / MIN_MS, 1), 3);
+      var p = Math.min(eased, (pageLoaded || t > MAX_MS) ? 1 : 0.9);
+      fillEl.style.transform = 'scaleX(' + p.toFixed(3) + ')';
+      pctEl.textContent = Math.round(p * 100) + '%';
+      statusEl.textContent = steps[Math.min(Math.floor(p * steps.length), steps.length - 1)];
+      if (p >= 1) finish();
+      else requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+
+    loader.addEventListener('click', finish);
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' || e.key === 'Enter') finish(); });
+  }
+
   /* ---- Mobile menu ---- */
   var toggle = document.getElementById('navToggle');
   var menu = document.getElementById('menu');
