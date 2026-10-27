@@ -30,7 +30,7 @@
   });
   syncThemeToggle();
 
-  /* ---- Intro loader (space theme, once per session) ---- */
+  /* ---- Intro loader (space theme, plays on every load) ---- */
   var loader = document.getElementById('loader');
   if (loader && root.classList.contains('has-loader')) {
     var loaderStars = document.getElementById('loaderStars');
@@ -61,7 +61,6 @@
     var finish = function () {
       if (finished) return;
       finished = true;
-      try { sessionStorage.setItem('introSeen', '1'); } catch (e) {}
       fillEl.style.transform = 'scaleX(1)';
       pctEl.textContent = '100%';
       statusEl.textContent = steps[steps.length - 1];

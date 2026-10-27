@@ -19,9 +19,9 @@
   <script>
     /* Apply saved theme before paint. Dark is the default. */
     try { if (localStorage.getItem('theme') === 'light') document.documentElement.setAttribute('data-theme', 'light'); } catch (e) {}
-    /* Intro loader: once per session, never with reduced motion. The timeout is a failsafe. */
+    /* Intro loader: plays on every load, never with reduced motion. The timeout is a failsafe. */
     try {
-      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && !sessionStorage.getItem('introSeen')) {
+      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         document.documentElement.classList.add('has-loader');
         setTimeout(function () { document.documentElement.classList.remove('has-loader'); }, 9000);
       }
